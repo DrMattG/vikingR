@@ -1,0 +1,50 @@
+---
+title: "Introduction to vikingR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_to_vikingR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, message=FALSE, warning=FALSE}
+library(vikingR)
+library(tidyverse, quietly = TRUE)
+theme_set(theme_minimal())
+```
+
+# Colour by discrete variable using default palette
+
+```{r discrete default, message=FALSE, warning=FALSE}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point(size = 4) +
+  scale_colour_viking()
+
+```
+
+# Colour by numeric variable with Gul (Gold/Yellow) palette
+
+```{r numeric value, message=FALSE, warning=FALSE}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +
+  geom_point(size = 4, alpha = .6) +
+  scale_colour_viking(discrete = FALSE, palette = "Gul")
+
+```
+
+# Fill by discrete variable with "Alle" palette 
+
+```{r Alle colours, message=FALSE, warning=FALSE}
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_viking(palette = "Alle", guide = "none")
+
+```
+

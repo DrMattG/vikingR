@@ -1,11 +1,18 @@
 Package: vikingR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Creates a Viking Era ggplot2 palette
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(
+    person("Matt", "Grainger", , "matthew.grainger@nina.no", role = c("aut", "cre")),
+    person("Gavin","Stewart", role = c("aut"))
+  )
+Description: During the Viking era colours were limited by the availability of natural pigments. This publication (https://tinyurl.com/bdfjhv25) highlights 12 of these and we have used this to create a ggplot palette.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
+Imports: ggplot2
+RoxygenNote: 7.1.2
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
