@@ -26,12 +26,15 @@ This is the basic usage:
 
 ``` r
 library(vikingR)
-library(ggplot2)
-#> Warning: package 'ggplot2' was built under R version 4.0.5
-ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
-  geom_bar() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  scale_fill_viking(palette = "Alle")
+library(tidyverse, quietly = TRUE)
+data("topNorName1880to2020")
+topNorName1880to2020%>% 
+  ggplot(aes(reorder(name,n),n, fill=name)) +
+  geom_histogram(stat="identity") +
+  scale_fill_viking(palette = "Alle", guide = "none")+
+  labs(x="", y= "Frequency in the top 10 boys names in Norway")+
+  coord_flip()+
+  theme_classic()
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
