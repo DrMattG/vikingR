@@ -4,6 +4,8 @@
 # vikingR
 
 <!-- badges: start -->
+
+[![DOI](https://zenodo.org/badge/445624213.svg)](https://zenodo.org/badge/latestdoi/445624213)
 <!-- badges: end -->
 
 vikingR creates a Viking era ggplot palette. Inspired by this
