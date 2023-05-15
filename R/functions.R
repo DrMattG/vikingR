@@ -66,9 +66,9 @@ scale_colour_viking <- function(palette = "Alle", discrete = TRUE, reverse = FAL
   pal <- viking_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("colour", paste0("viking_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("viking_", palette), palette = pal, ...)
   } else {
-    scale_colour_gradientn(colours = pal(256), ...)
+    ggplot2::scale_colour_gradientn(colours = pal(256), ...)
   }
 }
 
@@ -84,8 +84,8 @@ scale_fill_viking <- function(palette = "Alle", discrete = TRUE, reverse = FALSE
   pal <- viking_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("fill", paste0("viking_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("fill", paste0("viking_", palette), palette = pal, ...)
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    ggplot2::scale_fill_gradientn(colours = pal(256), ...)
   }
 }

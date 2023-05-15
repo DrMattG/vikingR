@@ -1,7 +1,7 @@
 Package: vikingR
 Type: Package
 Title: Creates a Viking Era ggplot2 palette
-Version: 0.1.0
+Version: 0.0.0.9000
 Authors@R: c(
     person("Matt", "Grainger", , "matthew.grainger@nina.no", role = c("aut", "cre")),
     person("Gavin","Stewart", role = c("aut"))
@@ -11,7 +11,7 @@ License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports: ggplot2
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Suggests: 
     rmarkdown,
     knitr
